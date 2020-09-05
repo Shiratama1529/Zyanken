@@ -84,6 +84,6 @@ function Judge(myHand) {
     $('#end-preview').css('display','block');
     $('#button-list').css('display','none');
     $('#button-restart').css('display','block');
-    $('#wins-letters').html("あんたの記録：" + wins + '連勝');
-    $('#world-max-wins-letters').html("全プレイヤー最高記録：" + worldWins + '連勝');
+    $('#wins-letters').html("あんたの今の記録：" + wins + '連勝');
+    $('#world-max-wins-letters').html("あんたの最高記録：" + worldWins + '連勝');
 }
