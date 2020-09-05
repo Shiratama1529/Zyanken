@@ -72,7 +72,11 @@ function Judge(myHand) {
     }
     
     var worldWins = localStorage.getItem('world-max-wins');
-    if(Number(worldWins) < wins) {
+    Number(worldWins);
+    if(worldWins === null) {
+        localStorage.setItem('world-max-wins',String(wins));
+    }
+    if(worldWins < wins) {
         localStorage.setItem('world-max-wins',String(wins));
     }
 
