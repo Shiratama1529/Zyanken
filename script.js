@@ -77,7 +77,8 @@ function Judge(myHand) {
         worldWins = 0;
     }
     if(worldWins < wins) {
-        localStorage.setItem('world-max-wins',String(wins));
+        worldWins = wins;
+        localStorage.setItem('world-max-wins',String(worldWins));
     }
 
     $('#end-preview').css('display','block');
