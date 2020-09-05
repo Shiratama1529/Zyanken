@@ -71,8 +71,14 @@ function Judge(myHand) {
         wins = 0;
     }
     
+    var worldWins = localStorage.getItem('world-max-wins');
+    if(Number(worldWins) < wins) {
+        localStorage.setItem('world-max-wins',String(wins));
+    }
+
     $('#end-preview').css('display','block');
     $('#button-list').css('display','none');
     $('#button-restart').css('display','block');
-    $('#wins-letters').html(wins + '連勝');
+    $('#wins-letters').html("あんたの記録：" + wins + '連勝');
+    $('#world-max-wins-letters').html("全プレイヤー最高記録：" + worldWins + '連勝');
 }
