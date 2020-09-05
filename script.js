@@ -1,4 +1,5 @@
 let wins = 0;
+var worldWins = localStorage.getItem('world-max-wins');
 
 $(function() {
     let myHand, comHand;
@@ -71,7 +72,6 @@ function Judge(myHand) {
         wins = 0;
     }
     
-    var worldWins = localStorage.getItem('world-max-wins');
     Number(worldWins);
     if(worldWins === null) {
         worldWins = 0;
